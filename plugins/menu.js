@@ -11,9 +11,9 @@ const defaultMenu = {
 ┃❏ Database : *%totalreg* 
 ┗━┃
 %readmore`.trim(),
-  header: '╭───「 %category\ntest 」',
-  body: '├ • %cmd %islimit %isPremium',
-  footer: '╰───「 *AuraBot* 」\n',
+  header: '*＞ %category *\n┏━━━━━━━━━━━━━━━━━━━━━━━━',
+  body: '    ┃ %cmd %islimit %isPremium',
+  footer: '┗━━━━━━━━━━━━━━━━━━━━━━━━\n',
   after: `
 `,
 }
@@ -180,59 +180,59 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
         title: 'List Menu ' + namabot,       
         rows: [
           { title: `┃Bot owner`, 
-           "description": "Nomor Pemilik Bot (owner)",
+           "description": "Bot Owner Number",
            rowId: `${_p} creator` },
 
-          { title: `┃Syarat Ketentuan dan Peraturan`, 
-           "description": "Harap membaca Peraturan demi kenyamanan kita bersama",
+          { title: `┃Terms and Conditions`, 
+           "description": "Please read the Rules for our convenience together",
            rowId: `${_p} rules` },
 
           { title: `┃Server official`, 
-           "description": "Gabung untuk mendapatkan informasi mengenai bot atau sekedar meramaikan",
+           "description": "Join to get information about bots or just to enliven",
            rowId: `${_p} auragc` },
 
-          { title: '┃Semua Perintah', 
-           "description": "Menu Semua Perintah",
+          { title: '┃all commands', 
+           "description": "All Orders",
            rowId: `${_p}? all` },
           
           { title: '┃Game',
-           "description": "Menu untuk Game",
+           "description": "Menu for Games",
            rowId: `${_p}? game` },
           
           { title: '┃XP', 
-           "description": "Menu untuk XP",
+           "description": "Menu for XP",
            rowId: `${_p}? xp` },
           
           { title: '┃Stiker',
-           "description": "Menu untuk Sticker",
+           "description": "Menu for Sticker",
            rowId: `${_p}? stiker` },
           
           { title: '┃Kerang Ajaib',
-           "description": "Puja kerang ajaib...",
+           "description": "questions and answers",
            rowId: `${_p}? kerangajaib` },
           
           { title: '┃Quotes', 
-           "description": "Menu untuk Quotes",
+           "description": "Menu for Quotes",
            rowId: `${_p}? quotes` },
           
           { title: '┃Grup', 
-           "description": "Menu untuk Group",
+           "description": "Menu for Group",
            rowId: `${_p}? grup` },
           
           { title: '┃Premium',
-           "description": "Menu untuk Premium Users",
+           "description": "Menu for Premium Users",
            rowId: `${_p}? premium` },
           
           { title: '┃Internet',
-           "description": "Menu untuk menjelajahi Internet...",
+           "description": "Menu for surfing the Internet",
            rowId: `${_p}? internet` },
           
           { title: '┃Anonymous',
-           "description": "Menu untuk Anonymous Chat",
+           "description": "Menu for Anonymous Chat",
            rowId: `${_p}? anonymous` },
 
           { title: '┃Menu Anime',
-           "description": "Menu untuk Wibu",
+           "description": "Menu for anime",
            rowId: `${_p}? anime` },
 
           { title: '┃Menu NSFW',
@@ -240,7 +240,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
            rowId: `${_p}? nsfw` },
           
           { title: '┃Nulis & Logo',
-           "description": "Menu untuk Nulis & Logo",
+           "description": "Menu for Writing & Logo",
            rowId: `${_p}? nulis` },
           
           { title: '┃Downloader',
@@ -248,19 +248,19 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
            rowId: `${_p}? downloader` },
           
           { title: '┃Tools',
-           "description": "Menu untuk Tools",
+           "description": "Menu for Tools",
            rowId: `${_p}? tools` },
           
           { title: '┃Fun',
-           "description": "Menu Hiburan",
+           "description": "Menu for fun",
            rowId: `${_p}? fun`},
           
           { title: '┃Database',
-           "description": "Menu untuk Database",
+           "description": "Menu for Database",
            rowId: `${_p}? database` },
           
           { title: '┃Vote & Absen',
-           "description": "Menu untuk Vote & Absen",
+           "description": "Menu for Vote & Absen",
            rowId: `${_p}? vote` },
           
           { title: "┃Islami",
@@ -268,11 +268,11 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
            rowId: `${_p}? quran` },
           
           { title: '┃Pengubah Suara',
-           "description": "Menu Pengubah Suara",
+           "description": "Voice Changer Menu",
            rowId: `${_p}? audio` },
 
           { title: '┃Info',
-           "description": "Menu untuk Info",
+           "description": "Menu for Info",
            rowId: `${_p}? info` },
           
           { title: '┃Tanpa Kategori',
@@ -280,14 +280,14 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
            rowId: `${_p}? tanpakategori` },
           
           { title: '┃Owner',
-           "description": "Menu Khusus Owner",
+           "description": "Owner's Special Menu",
            rowId: `${_p}? owner` },
         ]
       }
     ]
       const listMessage = {
-      text: 'Berikut ini adalah daftar menu AuraBot.',
-      footer: "Silahkan tekan tombol \"Browse Commands\" untuk melihat sub-menu AuraBot",
+      text: 'The following is a menu list Unkn0wnN.',
+      footer: "Please press button \"Browse Commands\" to see menu category Unkn0wnN",
       mentions: await conn.parseMention(judul),
       title: judul,
       buttonText: "Browse Commands",
@@ -339,7 +339,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       exp: exp - min,
       maxexp: xp,
       totalexp: exp,
-      xp4levelup: max - exp <= 0 ? `Siap untuk *${_p}levelup*` : `${max - exp} XP lagi untuk levelup`,
+      xp4levelup: max - exp <= 0 ? `Ready for *${_p}levelup*` : `${max - exp} XP again for levelup`,
       github: package.homepage ? package.homepage.url || package.homepage : '[unknown github url]',
       level, limit, name, umur, money, age, weton, week, date, dateIslamic, time, totalreg, rtotalreg, role,
       readmore: readMore
@@ -347,7 +347,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     await conn.send3ButtonImg(m.chat, await (await fetch(thumbfoto)).buffer(), text.trim(), wm, `Owner`, `${_p}owner`, `Server Official`, `${_p}auragc`, `Sedekah`, `${_p}donasi`)
   } catch (e) {
-    conn.reply(m.chat, 'Maaf, menu sedang error', m)
+    conn.reply(m.chat, 'Sorry, the menu is in error', m)
     throw e
   }
 }
@@ -381,16 +381,16 @@ function ucapan() {
   const time = moment.tz('Asia/Jakarta').format('HH')
   res = "Selamat dinihari"
   if (time >= 4) {
-    res = "Selamat pagi"
+    res = "Good morning"
   }
   if (time > 10) {
-    res = "Selamat siang"
+    res = "Good afternoon"
   }
   if (time >= 15) {
-    res = "Selamat sore"
+    res = "Good afternoon"
   }
   if (time >= 18) {
-    res = "Selamat malam"
+    res = "Selamat night"
   }
   return res
 }
