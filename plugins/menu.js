@@ -11,9 +11,9 @@ const defaultMenu = {
 ┃❏ Database : *%totalreg* 
 ┗━┃
 %readmore`.trim(),
-  header: '*＞ %category *\n┏━━━━━━━━━━━━━━━━━━━━━━━━',
-  body: ':  ┃%cmd %islimit %isPremium',
-  footer: '┗━━━━━━━━━━━━━━━━━━━━━━━━\n',
+  header: '*💡┃%category*\n┏━━━━━━━━━━━━━━━━━━━━━',
+  body: ' %cmd %islimit %isPremium',
+  footer: '┗━━━━━━━━━━━━━━━━━━━━━\n',
   after: `
 `,
 }
@@ -390,7 +390,7 @@ function ucapan() {
     res = "Good afternoon"
   }
   if (time >= 18) {
-    res = "Selamat night"
+    res = "Good night"
   }
   return res
 }
