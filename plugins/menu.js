@@ -11,9 +11,9 @@ const defaultMenu = {
 ┃❏ Database : *%totalreg* 
 ┗━┃
 %readmore`.trim(),
-  header: '＞ %category',
-  body: ' └ %cmd %islimit %isPremium',
-  footer: '\n',
+  header: '*＞ %category *\n┏━━━━━━━━━━━━━━━━━━━━━━━━',
+  body: ':  ┃%cmd %islimit %isPremium',
+  footer: '┗━━━━━━━━━━━━━━━━━━━━━━━━\n',
   after: `
 `,
 }
