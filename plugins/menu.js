@@ -5,13 +5,13 @@ let fetch = require('node-fetch')
 let moment = require('moment-timezone')
 const defaultMenu = {
   before: `
-┌─〔 %me 〕
-├ Hai, *%name!* ✨
-├ runtime *%uptime*
-├ Database *%totalreg*
-└────
+┏━┃
+┃❏ name : *%name!* ✨
+┃❏ runtime : *%uptime*
+┃❏ Database : *%totalreg* 
+┗━┃
 %readmore`.trim(),
-  header: '╭───「 %category 」',
+  header: '╭───「 %category\ntest 」',
   body: '├ • %cmd %islimit %isPremium',
   footer: '╰───「 *AuraBot* 」\n',
   after: `
